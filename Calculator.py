@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
         self.push_equal.setSizePolicy(sizePolicy)
         self.push_equal.setStyleSheet("QPushButton{\n"
 "font: 75 36pt \"MS Shell Dlg 2\";\n"
-"    color: rgb(255, 255, 127);\n"
+"    color: rgb(255, 255, 255);\n"
 "border-radius:30px;\n"
 "}\n"
 "\n"
@@ -115,7 +115,7 @@ class Ui_MainWindow(object):
         self.push_min.setSizePolicy(sizePolicy)
         self.push_min.setStyleSheet("QPushButton{\n"
 "font: 75 36pt \"MS Shell Dlg 2\";\n"
-"    color: rgb(255, 255, 127);\n"
+"    color: rgb(255, 255, 255);\n"
 "border-radius:30px;\n"
 "}\n"
 "\n"
@@ -228,7 +228,7 @@ class Ui_MainWindow(object):
         self.push_mult.setSizePolicy(sizePolicy)
         self.push_mult.setStyleSheet("QPushButton{\n"
 "font: 75 36pt \"MS Shell Dlg 2\";\n"
-"    color: rgb(255, 255, 127);\n"
+"    color: rgb(255, 255, 255);\n"
 "border-radius:30px;\n"
 "}\n"
 "\n"
@@ -360,7 +360,7 @@ class Ui_MainWindow(object):
         self.push_div.setSizePolicy(sizePolicy)
         self.push_div.setStyleSheet("QPushButton{\n"
 "font: 75 36pt \"MS Shell Dlg 2\";\n"
-"    color: rgb(255, 255, 127);\n"
+"    color: rgb(255, 255, 255);\n"
 "border-radius:30px;\n"
 "}\n"
 "\n"
@@ -382,7 +382,7 @@ class Ui_MainWindow(object):
         self.push_plus.setSizePolicy(sizePolicy)
         self.push_plus.setStyleSheet("QPushButton{\n"
 "font: 75 36pt \"MS Shell Dlg 2\";\n"
-"    color: rgb(255, 255, 127);\n"
+"    color: rgb(255, 255, 255);\n"
 "border-radius:30px;\n"
 "}\n"
 "\n"
