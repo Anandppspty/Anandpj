@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Background</class>
+ <widget class="QMainWindow" name="Background">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1300</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1300</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1300</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>86 &quot;Eighty-Six&quot; Wiki Fandom</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>banner.png</normaloff>banner.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: url(:/shineilenabg/bg.jpg)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="inputtext">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>461</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/input white/white screen.jpg);
+font: 60 30pt &quot;Angsana New&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="searchbutton">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>90</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 24pt &quot;Angsana New&quot;;
+background-image: url(:/background/bg.jpg);</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="displaytext">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>140</y>
+      <width>1211</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/input white/white screen.jpg);</string>
+    </property>
+   </widget>
+   <zorder>displaytext</zorder>
+   <zorder>inputtext</zorder>
+   <zorder>searchbutton</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1300</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="BGqrc.qrc"/>
+  <include location="BGqrc_rc.py"/>
+ </resources>
+ <connections/>
+</ui>

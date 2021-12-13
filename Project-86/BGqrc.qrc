@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="shineilenabg">
+    <file>bg.jpg</file>
+  </qresource>
+  <qresource prefix="whitescreenbg">
+    <file>white screen.jpg</file>
+  </qresource>
+</RCC>

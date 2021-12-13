@@ -1,0 +1,18 @@
+M101 Barrett/Scavenger
+
+Place of Origin - Republic of San Magnolia
+		  Federal Republic of Giad
+
+Manufacturer - Republic Military Industries
+	       WHM
+
+Length - 3.1 m
+
+Height - 2.5 m
+
+Crew - Unmanned
+
+Main Armament - 2x High-Operation Crane Arm
+		1x Large Container Mount
+
+	The M101 Barrett or Scavenger is a support drone designed to accompany the M1A4 Juggernaut and its successor—the XM2 Reginleif. It is equipped with two high-operation crane arms and one large container mount, and has a loading capacity of over 10 tons. An M101 Barrett and a Scavenger are practically identical; the former was built by San Magnolia's RMI, while the latter was reverse engineered from the Barrett by Giad's WHM.

@@ -1,0 +1,22 @@
+-	Mechs
+
+-FELDREB
+M1A4 Juggernaut
+M4A3 Vanagandr
+XM2 Reginleif
+Alkonost
+Barushka Matushka
+
+-FELDREB support units
+M101 Barrett
+
+-Legion
+Eintagsfliege
+Ameise
+Grauwolf
+Lowe
+Dinosauria
+Self-Propelled Mine
+Skorpion
+Morpho
+Phonix

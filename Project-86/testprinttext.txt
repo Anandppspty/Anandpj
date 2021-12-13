@@ -1,0 +1,11 @@
+filename = "characters\\Anju Emma.txt"
+f = open(filename,"r")
+print(f.read())
+
+#self.displaytext.setPlainText(result)
+#self.inputtext.setText("")
+
+elif result in [""]:
+            f = open("characters\.txt","r")
+            self.displaytext.setPlainText(f.read())
+

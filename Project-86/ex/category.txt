@@ -1,0 +1,5 @@
+-	Category
+Characters
+Country
+Group
+Mechs

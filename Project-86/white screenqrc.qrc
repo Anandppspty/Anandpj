@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="white screen">
+    <file>white screen.jpg</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,71 @@
+-	Characters
+Anju
+Daiya
+Dustin
+Ernst
+Erwin
+Eugene
+Fido
+Frederica
+Grethe
+Haruto
+Henrietta
+Jerome
+Josef
+Kaie
+Kiriya
+Kujo
+Kurena
+Lerche
+Ludmila
+Margareta
+Nina
+Raiden
+Reki
+Richard
+Shiden
+Shinei
+Shourei
+Teresa
+TP
+Vaclav
+Viktor
+Vladilena
+Willem
+Zelene
+
+-	Country
+Federal Republic of Giad
+Giadian Empire
+Republic of San Magnolia
+United Kingdom of Roa Gracia
+
+-	Group
+Eighty-Sixth Strike Package
+Sirin
+Spearhead Squadron
+
+-	Mechs
+
+-FELDREB
+M1A4 Juggernaut
+M4A3 Vanagandr
+XM2 Reginleif
+Alkonost
+Barushka Matushka
+
+-FELDREB support units
+M101 Barrett
+
+-Legion
+Eintagsfliege
+Ameise
+Grauwolf
+Lowe
+Dinosauria
+Self-Propelled Mine
+Skorpion
+Morpho
+Phonix
+
+

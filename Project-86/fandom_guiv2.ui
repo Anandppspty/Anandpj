@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Background</class>
+ <widget class="QMainWindow" name="Background">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1300</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1300</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1300</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>86 &quot;Eighty-Six&quot; Wiki Fandom</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>banner.png</normaloff>banner.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: url(:/shineilenabg/bg.jpg)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="searchbutton">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>90</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 24pt &quot;Angsana New&quot;;
+background-image: url(:/background/bg.jpg);</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="displaytext">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>140</y>
+      <width>1211</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/input white/white screen.jpg);
+font: 22pt &quot;Angsana New&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputtext">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>461</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/whitescreenbg/white screen.jpg);
+font: 75 48pt &quot;Angsana New&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>830</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>830</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hide</string>
+    </property>
+   </widget>
+   <zorder>displaytext</zorder>
+   <zorder>searchbutton</zorder>
+   <zorder>inputtext</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1300</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="BGqrc.qrc"/>
+  <include location="BGqrc_rc.py"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>displaytext</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>56</x>
+     <y>860</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>110</x>
+     <y>754</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>displaytext</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>863</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>181</x>
+     <y>762</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
