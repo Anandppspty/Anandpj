@@ -73,7 +73,7 @@ class Ui_Background(object):
         self.searchbutton.setText(_translate("Background", "Search"))
         self.pushButton.setText(_translate("Background", "Show"))
         self.pushButton_2.setText(_translate("Background", "Hide"))
-        self.displaytext.setPlainText(_translate("Background", "    86―Eighty-Six― is a Japanese science fiction light novel series written by Asato Asato and illustrated by Shirabii. It began publication by ASCII Media Works under their Dengeki Bunko imprint in February 2017. The series is licensed in North America by Yen Press. \n  \n    A War Without Casualties The Republic of San Magnolia has long been under attack from the neighboring Giadian Empire's army of unmanned drones known as the Legion. After years of painstaking research, the Republic finally developed autonomous drones of their own, turning the one-sided struggle into a war without casualties-or at least, that's what the government claims. In truth, there is no such thing as a bloodless war. Beyond the fortified walls protecting the eighty-five Republic territories lies the nonexistent Eighty-Sixth Sector. The young men and women of this forsaken land are branded the Eighty-Six and, stripped of their humanity, pilot the unmanned weapons into battle. \n \n      Type List or Category for more information"))
+        self.displaytext.setPlainText(_translate("Background", "    86―Eighty-Six― is a Japanese science fiction light novel series written by Asato Asato and illustrated by Shirabii. It began publication by ASCII Media Works under their Dengeki Bunko imprint in February 2017. The series is licensed in North America by Yen Press. \n  \n    A War Without Casualties The Republic of San Magnolia has long been under attack from the neighboring Giadian Empire's army of unmanned drones known as the Legion. After years of painstaking research, the Republic finally developed autonomous drones of their own, turning the one-sided struggle into a war without casualties-or at least, that's what the government claims. In truth, there is no such thing as a bloodless war. Beyond the fortified walls protecting the eighty-five Republic territories lies the nonexistent Eighty-Sixth Sector. The young men and women of this forsaken land are branded the Eighty-Six and, stripped of their humanity, pilot the unmanned weapons into battle. \n \n \n \n \n \n \n \n \n      Type List or Category for more information"))
         
 
     def searchu(self):
@@ -311,6 +311,9 @@ class Ui_Background(object):
             f = open("ex\86.txt","r")
             img = cv2.imread('ex pic\86.jpg') 
             cv2.imshow('86', img)
+            self.displaytext.setPlainText(f.read())
+        elif result in ["MILIZE","MILIZÉ"]:
+            f = open("ex\milize.txt","r")
             self.displaytext.setPlainText(f.read())
         elif result in ["ALKONOST"]:
             f = open("mechs\FELDREẞ\Alkonost.txt","r")
