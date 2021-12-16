@@ -41,15 +41,17 @@ class Ui_Background(object):
         self.inputtext.setStyleSheet("background-image: url(:/whitescreenbg/white screen.jpg);\n"
 "font: 75 48pt \"Angsana New\";")
         self.inputtext.setObjectName("inputtext")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(780, 180, 361, 291))
-        self.label.setStyleSheet("background-image: url(:/whitescreenbg/white screen.jpg);")
-        self.label.setText("")
-        self.label.setObjectName("label")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(40, 830, 75, 23))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(120, 830, 75, 23))
+        self.pushButton_2.setObjectName("pushButton_2")
         self.displaytext.raise_()
         self.searchbutton.raise_()
         self.inputtext.raise_()
-        self.label.raise_()
+        self.pushButton.raise_()
+        self.pushButton_2.raise_()
         Background.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(Background)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1300, 21))
@@ -58,196 +60,338 @@ class Ui_Background(object):
         self.statusbar = QtWidgets.QStatusBar(Background)
         self.statusbar.setObjectName("statusbar")
         Background.setStatusBar(self.statusbar)
+        self.searchbutton.clicked.connect(self.searchu)
 
         self.retranslateUi(Background)
+        self.pushButton.clicked.connect(self.displaytext.show) # type: ignore
+        self.pushButton_2.clicked.connect(self.displaytext.hide) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Background)
 
     def retranslateUi(self, Background):
         _translate = QtCore.QCoreApplication.translate
         Background.setWindowTitle(_translate("Background", "86 \"Eighty-Six\" Wiki Fandom"))
         self.searchbutton.setText(_translate("Background", "Search"))
+        self.pushButton.setText(_translate("Background", "Show"))
+        self.pushButton_2.setText(_translate("Background", "Hide"))
+        self.displaytext.setPlainText(_translate("Background", "    86―Eighty-Six― is a Japanese science fiction light novel series written by Asato Asato and illustrated by Shirabii. It began publication by ASCII Media Works under their Dengeki Bunko imprint in February 2017. The series is licensed in North America by Yen Press. \n  \n    A War Without Casualties The Republic of San Magnolia has long been under attack from the neighboring Giadian Empire's army of unmanned drones known as the Legion. After years of painstaking research, the Republic finally developed autonomous drones of their own, turning the one-sided struggle into a war without casualties-or at least, that's what the government claims. In truth, there is no such thing as a bloodless war. Beyond the fortified walls protecting the eighty-five Republic territories lies the nonexistent Eighty-Sixth Sector. The young men and women of this forsaken land are branded the Eighty-Six and, stripped of their humanity, pilot the unmanned weapons into battle. \n \n \n \n \n \n \n \n \n      Type List or Category for more information"))
+    
 
     def searchu(self):
         result=self.inputtext.text()
         result=(result.upper())
         if result in ["LENA","VLADILENA","VLADILENA MILIZE","VLADILENA MILIZÉ","HANDLER ONE","BLOODY REINA","BLOODY REGINA","THE BLOODSTAINED QUEEN"]:
             f = open("characters\Vladilena Milize.txt","r")
+            img = cv2.imread('char pic\Vladilena Milize.jpg') 
+            cv2.imshow('Vladilena Milize', img) 
             self.displaytext.setPlainText(f.read())
         elif result in ["ANJU EMMA","SNOW WITCH","ANJU","SNOWWITCH","EMMA"]:
             f = open("characters\Anju Emma.txt","r")
+            img = cv2.imread('char pic\Anju Emma.jpg') 
+            cv2.imshow('Anju Emma', img) 
             self.displaytext.setPlainText(f.read())
-            self.label.setPixmap(QPixmap("char pic\Anju Emma.jpg"))
         elif result in ["DAIYA IRMA","BLACK DOG","DAIYA","BLACKDOG","IRMA"]:
             f = open("characters\Daiya Irma.txt","r")
+            img = cv2.imread('char pic\Daiya Irma.jpg') 
+            cv2.imshow('Daiya Irma', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["DUSTIN JAEGER","SAGITTARIUS","DUSTIN","JAEGER"]:
-            f = open("characters\Dustin Yaeger.txt","r")
+            f = open("characters\Dustin Jaeger.txt","r")
+            img = cv2.imread('char pic\Dustin Jaeger.jpg') 
+            cv2.imshow('Dustin Jaeger', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["ERNST ZIMMERMAN","ERNST","ZIMMERMAN"]:
             f = open("characters\Ernst Zimmerman.txt","r")
+            img = cv2.imread('char pic\Ernst Zimmerman.jpg') 
+            cv2.imshow('Ernst Zimmerman', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["ERWIN MARCEL","ERWIN","MARCEL"]:
             f = open("characters\Erwin Marcel.txt","r")
+            img = cv2.imread('char pic\Erwin Marcel.jpg') 
+            cv2.imshow('Erwin Marcel', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["EUGENE RANTZ","EUGENE"]:
             f = open("characters\Eugene Rantz.txt","r")
+            img = cv2.imread('char pic\Eugene Rantz.jpg') 
+            cv2.imshow('Eugene Rantz', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["FIDO"]:
             f = open("characters\Fido.txt","r")
+            img = cv2.imread('char pic\Fido.jpg') 
+            cv2.imshow('Fido', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["FREDERICA ROSENFORT","FREDERICA","ROSENFORT","AUGUSTA FREDERICA ADEL-ADLER","AUGUSTA FREDERICA ADEL ADLER","AUGUSTA","ADEL-ADLER","ADEL ADLER"]:
             f = open("characters\Frederica Rosenfort.txt","r")
+            img = cv2.imread('char pic\Frederica Rosenfort.jpg') 
+            cv2.imshow('Frederica Rosenfort', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["GRETHE WENZEL","GRETHE","WENZEL"]:
             f = open("characters\Grethe Wenzel.txt","r")
+            img = cv2.imread('char pic\Grethe Wenzel.jpg') 
+            cv2.imshow('Grethe Wenzel', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["HARUTO KEATS","FALKE","HARUTO","KEATS"]:
             f = open("characters\Haruto Keats.txt","r")
+            img = cv2.imread('char pic\Haruto Keats.jpg') 
+            cv2.imshow('Haruto Keats', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["HENRIETTA VON PENROSE","ANNETTE","RITA","MINERVA","HENRIETTA"]:
             f = open("characters\Henrietta von Penrose.txt","r")
+            img = cv2.imread('char pic\Henrietta von Penrose.jpg') 
+            cv2.imshow('Henrietta von Penrose', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["JÉRÔME KARLSTAHL","JEROME KARLSTAHL","JÉRÔME","JEROME"]:
             f = open("characters\Jérôme Karlstahl.txt","r")
+            img = cv2.imread('char pic\Jerome Karlstahl.jpg') 
+            cv2.imshow('Jerome Karlstahl', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["JOSEF VON PENROSE","JOSEF"]:
             f = open("characters\Josef von Penrose.txt","r")
+            img = cv2.imread('char pic\Josef von Penrose.jpg') 
+            cv2.imshow('Josef von Penrose', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["KAIE TANIYA","KIRSCHBLÜTE","KIRSCHBLUTE","KAIE","TANIYA"]:
             f = open("characters\Kaie Taniya.txt","r")
+            img = cv2.imread('char pic\Kaie Taniya.jpg') 
+            cv2.imshow('Kaie Taniya', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["KIRIYA NOUZEN","KIRIYA","KIRI","PALE RIDER","PALERIDER"]:
             f = open("characters\Kiriya Nouzen.txt","r")
+            img = cv2.imread('char pic\Kiriya Nouzen.jpg') 
+            cv2.imshow('Kiriya Nouzen', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["KUJO NICO","SIRIUS","KUJO","NICO"]:
             f = open("characters\Kujo Nico.txt","r")
+            img = cv2.imread('char pic\Kujo Nico.jpg') 
+            cv2.imshow('Kujo Nico', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["KURENA KUKUMILA","GUNSLINGER","GUN SLINGER","KURENA","KUKUMILA"]:
             f = open("characters\Kurena Kukumila.txt","r")
+            img = cv2.imread('char pic\Kurena Kukumila.jpg') 
+            cv2.imshow('Kurena Kukumila', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["LERCHE","SEVEN YEAR OLD","SEVEN-YEAR-OLD","LERCHENLIED","CHAIKA"]:
             f = open("characters\Lerche.txt","r")
+            img = cv2.imread('char pic\Lerche.jpg') 
+            cv2.imshow('Lerche', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["LUDMILA","MALINOVKA ONE","MALINOVKAONE"]:
             f = open("characters\Ludmila.txt","r")
+            img = cv2.imread('char pic\Ludmila.jpg') 
+            cv2.imshow('Ludmila', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["MARGARETA MILIZÉ","MARGARETA MILIZE","MARGARETA"]:
             f = open("characters\Margareta Milizé.txt","r")
+            img = cv2.imread('char pic\Margareta Milize.jpg') 
+            cv2.imshow('Margareta Milize', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["NINA RANTZ","NINA"]:
             f = open("characters\MNina Rantz.txt","r")
+            img = cv2.imread('char pic\MNina Rantz.jpg') 
+            cv2.imshow('Nina Rantz', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["RAIDEN SHUGA","WEHWOLF","WEREWOLF","RAIDEN","SHUGA"]:
             f = open("characters\Raiden Shuga.txt","r")
+            img = cv2.imread('char pic\Raiden Shuga.jpg') 
+            cv2.imshow('Raiden Shuga', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["REKI MICHIHI","HUALIAN","REKI","MICHIHI"]:
             f = open("characters\Reki Michihi.txt","r")
+            img = cv2.imread('char pic\Reki Michihi.jpg') 
+            cv2.imshow('Reki Michihi', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["RICHARD ALTNER","RICHARD","ALTNER"]:
             f = open("characters\Richard Altner.txt","r")
+            img = cv2.imread('char pic\Richard Altner.jpg') 
+            cv2.imshow('Richard Altner', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["SHIDEN IIDA","CYCLOPS","CYCLOP","SHIDEN","IIDA"]:
             f = open("characters\Shiden Iida.txt","r")
+            img = cv2.imread('char pic\Shiden Iida.jpg') 
+            cv2.imshow('Shiden Iida', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["SHINEI NOUZEN","SHIN","UNDERTAKER","REAPER","SHINEI","BÁLEYGR","BALEYGR"]:
             f = open("characters\Shinei Nouzen.txt","r")
+            img = cv2.imread('char pic\Shinei Nouzen.jpg') 
+            cv2.imshow('Shinei Nouzen', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["SHOUREI NOUZEN","REI","SHOUREI","DULLAHAN","HEADLESS KNIGHT"]:
             f = open("characters\Shourei Nouzen.txt","r")
+            img = cv2.imread('char pic\Shourei Nouzen.jpg') 
+            cv2.imshow('Shourei Nouzen', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["TERESA"]:
             f = open("characters\Teresa.txt","r")
+            img = cv2.imread('char pic\Teresa.jpg') 
+            cv2.imshow('Teresa', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["THEOTO RIKKA","THEO","THEOTO","RIKKA","LAUGHING FOX","LAUGHINGFOX"]:
             f = open("characters\Theoto Rikka.txt","r")
+            img = cv2.imread('char pic\Theoto Rikka.jpg') 
+            cv2.imshow('Theoto Rikka', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["TP","THERMOPYLAE","TIPPY","TEPPY","BLACKIE","WHITEY","CALICO","KITTY","REMARQUE"]:
             f = open("characters\TP.txt","r")
+            img = cv2.imread('char pic\TP.jpg') 
+            cv2.imshow('TP', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["VÁCLAV MILIZÉ","VACLAV MILIZE","VÁCLAV","VACLAV","VÁCLAV MILIZE","VACLAV MILIZÉ"]:
             f = open("characters\Václav Milizé.txt","r")
+            img = cv2.imread('char pic\Václav Milize.jpg') 
+            cv2.imshow('Vaclav Milize', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["VIKTOR IDINAROHK","VIKTOR","VIKA","VIKA THE KING OF CORPSES","THE KING OF CORPSES","THE SERPENT OF SHACKLES AND DECAY","GADYUKA","HVEÐRUNGR","HVEDRUNGER"]:
             f = open("characters\Viktor Idinarohk.txt","r")
+            img = cv2.imread('char pic\Viktor Idinarohk.jpg') 
+            cv2.imshow('Viktor Idinarohk', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["WILLEM EHRENFRIED","WILLEM","EHRENFRIED"]:
             f = open("characters\Willem Ehrenfried.txt","r")
+            img = cv2.imread('char pic\Willem Ehrenfried.jpg') 
+            cv2.imshow('Willem Ehrenfried', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["ZELENE BIRKENBAUM","ZELENE","BIRKENBAUM","MISTRESS","MERCILESS QUEEN"]:
             f = open("characters\Zelene Birkenbaum.txt","r")
+            img = cv2.imread('char pic\Zelene Birkenbaum.jpg') 
+            cv2.imshow('Zelene Birkenbaum', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["FEDERAL REPUBLIC OF GIAD","GIAD","REPUBLIC OF GIAD","REPUBLIC GIAD","FEDERAL REPUBLIC"]:
             f = open("country\Federal Republic of Giad.txt","r")
+            img = cv2.imread('flag pic\Giad.jpg') 
+            cv2.imshow('Giad', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["GIADIAN EMPIRE","EMPIRE","GIADIAN"]:
             f = open("country\Giadian Empire.txt","r")
+            img = cv2.imread('flag pic\Giadian Empire.jpg') 
+            cv2.imshow('Giad', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["REPUBLIC OF SAN MAGNOLIA","SAN MAGNOLIA","SANMAGNOLIA"]:
             f = open("country\Republic of San Magnolia.txt","r")
+            img = cv2.imread('flag pic\Republic of San Magnolia.jpg') 
+            cv2.imshow('Republic of San Magnolia', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["UNITED KINGDOM OF ROA GRACIA","UNITED KINGDOM","ROA GRACIA","ROAGRACIA"]:
             f = open("country\ZUnited Kingdom of Roa Gracia.txt","r")
+            img = cv2.imread('flag pic\ZUnited Kingdom of Roa Gracia.jpg') 
+            cv2.imshow('United Kingdom of Roa Gracia', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["EIGHTY-SIXTH STRIKE PACKAGE","STRIKE PACKAGE","EIGHTY-SIXTH STRIKE","EIGHTY-SIXTH PACKAGE"]:
             f = open("ex\Eighty-Sixth Strike Package.txt","r")
+            img = cv2.imread('ex pic\Eighty-Sixth Strike Package.jpg') 
+            cv2.imshow('Eighty-Sixth Strike Package', img)
             self.displaytext.setPlainText(f.read())
-        elif result in ["LIST","CATEGORY"]:
+        elif result in ["LIST"]:
             f = open("ex\list.txt","r")
+            self.displaytext.setPlainText(f.read())
+        elif result in ["CATEGORY"]:
+            f = open("ex\category.txt","r")
+            self.displaytext.setPlainText(f.read())
+        elif result in ["CHARACTERS","CHARACTER"]:
+            f = open("ex\characters.txt","r")
+            self.displaytext.setPlainText(f.read())
+        elif result in ["COUNTRY"]:
+            f = open("ex\country.txt","r")
+            self.displaytext.setPlainText(f.read())
+        elif result in ["GROUP","GROUPS"]:
+            f = open("ex\group.txt","r")
+            self.displaytext.setPlainText(f.read())
+        elif result in ["MECH","MECHS"]:
+            f = open("ex\mech.txt","r")
             self.displaytext.setPlainText(f.read())
         elif result in ["SIRIN"]:
             f = open("ex\Sirin.txt","r")
+            img = cv2.imread('char pic\Lerche.jpg') 
+            cv2.imshow('Sirin', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["SPEARHEAD SQUADRON","SPEARHEAD","SPEARHEAD SQUAD"]:
             f = open("ex\Spearhead Squadron.txt","r")
+            img = cv2.imread('ex pic\Spearhead Squadron.jpg') 
+            cv2.imshow('Spearhead Squadron', img)
+            self.displaytext.setPlainText(f.read())
+        elif result in ["86","EIGHTY SIX","EIGHTYSIX"]:
+            f = open("ex\86.txt","r")
+            img = cv2.imread('ex pic\86.jpg') 
+            cv2.imshow('86', img)
+            self.displaytext.setPlainText(f.read())
+        elif result in ["MILIZE","MILIZÉ"]:
+            f = open("ex\milize.txt","r")
             self.displaytext.setPlainText(f.read())
         elif result in ["ALKONOST"]:
             f = open("mechs\FELDREẞ\Alkonost.txt","r")
+            img = cv2.imread('FELDREB pic\Alkonost.jpg') 
+            cv2.imshow('Alkonost', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["BARUSHKA","BARUSHKA MATUSHKA","MATUSHKA","BARUSHKAMATUSHKA"]:
             f = open("mechs\FELDREẞ\Barushka Matushka.txt","r")
+            img = cv2.imread('FELDREB pic\Barushka Matushka.jpg') 
+            cv2.imshow('Barushka Matushka', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["M1A4 JUGGERNAUT","M1A4","JUGGERNAUT"]:
             f = open("mechs\FELDREẞ\M1A4 Juggernaut.txt","r")
+            img = cv2.imread('FELDREB pic\M1A4 Juggernaut.jpg') 
+            cv2.imshow('M1A4 Juggernaut', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["M4A3 VÁNAGANDR","M4A3","VÁNAGANDR","VANAGANDR","M4A3 VANAGANDR","M4A3 VÁNAGAND","M4A3 VANAGAND"]:
             f = open("mechs\FELDREẞ\M4A3 Vánagandr.txt","r")
+            img = cv2.imread('FELDREB pic\M4A3 Vánagandr.jpg') 
+            cv2.imshow('M4A3 Vanagandr', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["XM2 REGINLEIF","REGINLEIF","XM2","REGINLEF","REGINLIF","REGINLIEF"]:
             f = open("mechs\FELDREẞ\XM2 Reginleif.txt","r")
+            img = cv2.imread('FELDREB pic\XM2 Reginleif.jpg') 
+            cv2.imshow('XM2 Reginleif', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["M101 BARRETT","M101","BARRETT","BARRET","BARET","SCAVENGER","SCARVENGER","M101 BARRETT/SCAVENGER","M101 Scavenger"]:
             f = open("mechs\FELDREẞ support units\M101 Barrett.txt","r")
+            img = cv2.imread('FELDREB pic\M101 Barrett.jpg') 
+            cv2.imshow('M101 Barrett/Scavenger', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["AMEISE","AMEIS","AMESE","AMISE"]:
             f = open("mechs\legion\Ameise.txt","r")
+            img = cv2.imread('Legion pic\Ameise.jpg') 
+            cv2.imshow('Ameise', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["DINOSAURIA","DINO","DINOSAUR"]:
             f = open("mechs\legion\Dinosauria.txt","r")
+            img = cv2.imread('Legion pic\Dinosauria.jpg') 
+            cv2.imshow('Dinosauria', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["EINTAGSFLIEGE","EINTAFLIEGE","EINTAGSFLIEGER","EINTAFLIEGER"]:
             f = open("mechs\legion\Eintagsfliege.txt","r")
+            img = cv2.imread('Legion pic\Eintagsfliege.jpg') 
+            cv2.imshow('Eintagsfliege', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["GRAUWOLF","WOLF","GRAWWOLF","GROWWOLF"]:
             f = open("mechs\legion\Grauwolf.txt","r")
+            img = cv2.imread('Legion pic\Grauwolf.jpg') 
+            cv2.imshow('Grauwolf', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["LÖWE","LOWE","LOWER","LÖWER"]:
             f = open("mechs\legion\Löwe.txt","r")
+            img = cv2.imread('Legion pic\Löwe.jpg') 
+            cv2.imshow('Lowe', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["MORPHO","MOPHO"]:
             f = open("mechs\legion\Morpho.txt","r")
+            img = cv2.imread('Legion pic\Morpho.jpg') 
+            cv2.imshow('Morpho', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["PHÖNIX","PHÖENIX","PHONIX","PHOENIX"]:
             f = open("mechs\legion\Phönix.txt","r")
+            img = cv2.imread('Legion pic\Phönix.jpg') 
+            cv2.imshow('Phonix', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["SELF-PROPELLED MINE","SELF PROPELLED MINE","PROPELLED MINE","SELF MINE"]:
             f = open("mechs\legion\Self-Propelled Mine.txt","r")
+            img = cv2.imread('Legion pic\Self-Propelled Mine.jpg') 
+            cv2.imshow('Self-Propelled Mine', img)
             self.displaytext.setPlainText(f.read())
         elif result in ["SKORPION","SCORPION"]:
             f = open("mechs\legion\Skorpion.txt","r")
+            img = cv2.imread('Legion pic\Skorpion.jpg') 
+            cv2.imshow('Skorpion', img)
             self.displaytext.setPlainText(f.read())
         else:
             self.displaytext.setPlainText("Not Found, You can type List or Category for more information")
-
 import BGqrc_rc
 
 if __name__ == "__main__":
